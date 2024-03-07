@@ -12,6 +12,20 @@
 
 #include <unistd.h>
 
+int		ft_validate_all(char *box, struct map_info info);
+int		ft_if_info_differs(struct map_info info);
+int		ft_box_has_valid_characters(char *box, struct map_info info);
+int		ft_box_has_valid_lines(char *box, struct map_info info);
+int		check_new_line(char *box, struct map_info info);
+
+struct map_info{
+    int num_lines;
+    char empty_char;
+    char obstacle_char;
+    char full_char;
+    int line_size;
+};
+
 int	ft_validate_all(char *box, struct map_info info)
 {
 	if (ft_if_info_differs(info) == 0)
